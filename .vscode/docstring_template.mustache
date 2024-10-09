@@ -1,0 +1,41 @@
+{{summaryPlaceholder}}          
+
+
+{{#parametersExist}}
+
+Args:
+{{#args}}
+    {{var}}: {{descriptionPlaceholder}}
+{{/args}}
+
+{{/parametersExist}}
+
+
+{{#exceptionsExist}}
+
+Throw:
+{{#exceptions}}
+    {{type}}: {{descriptionPlaceholder}}
+{{/exceptions}}
+
+{{/exceptionsExist}}
+
+
+{{!#returnsExist}}
+
+Return:
+{{#returns}}
+    {{descriptionPlaceholder}}
+{{/returns}}
+
+{{!/returnsExist}}
+
+
+{{#yieldsExist}}
+
+Yield:
+{{#yields}}
+    {{descriptionPlaceholder}}
+{{/yields}}
+
+{{/yieldsExist}}

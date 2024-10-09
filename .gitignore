@@ -161,11 +161,27 @@ cython_debug/
 #  option (not recommended) you can uncomment the following to ignore the entire idea folder.
 #.idea/
 
-data/
+# image files
+
+data/external/
+data/processed/*
+data/raw/*
+
+# image informations
+
+!data/raw/all_image_urls.csv
+!data/raw/annotations.json
+
+!data/processed/data.yaml
+
 
 dataset/images/
 dataset/labels/
 
+# YOLO runtime generated files
+
 runs/
+
+# YOLO pre treined weights
 
 yolo11s.pt

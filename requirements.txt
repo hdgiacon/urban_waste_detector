@@ -1,11 +1,27 @@
-pillow
-requests
+######################################
+#
+############# Basic libs #############
+
 jupyter
 numpy
 pandas
 matplotlib
 seaborn
+
+######################################
+#
+######### Download Image libs ########
+
+pillow
+requests
 graphviz
 Cython
+
+######################################
+#
+###### Machine and Deep Learning #####
+
 scikit-learn
 ultralytics
+
+######################################
