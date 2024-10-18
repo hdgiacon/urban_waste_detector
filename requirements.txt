@@ -19,6 +19,13 @@ Cython
 
 ######################################
 #
+######### Data Augumentation #########
+
+albumentations
+opencv-python
+
+######################################
+#
 ###### Machine and Deep Learning #####
 
 scikit-learn
