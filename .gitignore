@@ -179,9 +179,10 @@ dataset/images/
 dataset/labels/
 
 # YOLO runtime generated files
-
 runs/
 
 # YOLO pre treined weights
-
 yolo11s.pt
+
+# manual test images
+assets/

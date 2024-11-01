@@ -10,6 +10,7 @@ def main_model() -> None:
     '''
 
     weights_path = "data/external/yolo_training_run_weights/weights/best.pt"
+    conf = 0.25
 
     if os.path.exists(weights_path):
         model = YOLO(weights_path)
@@ -24,17 +25,19 @@ def main_model() -> None:
             device = "0",
             project = "data/external",
             name = "yolo_training_run_weights",
-            #augment = True,  # Ativa o Data Augmentation
-            #degrees = 10,  # Rotação de até 10 graus
-            #scale = 0.5,  # Zoom de até 50%
-            #shear = 2,    # Shear (distorsão) de até 2 graus
-            #flipud = 0.5,  # Flip vertical com probabilidade de 50%
-            #fliplr = 0.5,  # Flip horizontal com probabilidade de 50%
-            #patience = 5,  # early stopping
+            
+            #augment = True,
+            #degrees = 10,
+            #scale = 0.5,
+            #shear = 2,
+            #flipud = 0.5,
+            #fliplr = 0.5,
+            
+            patience = 4,  # early stopping
             #cos_lr = True   # lr adjust
         )
 
-        metrics = model.val(conf = 0.25)
+        metrics = model.val(conf = conf)
 
         model.export(
             format = "tflite",
@@ -64,5 +67,5 @@ def main_model() -> None:
 
 
     for img in os.listdir('assets/'):
-        results = model("assets/" + img, conf = 0.25)
+        results = model("assets/" + img, conf = conf)
         results[0].show()
